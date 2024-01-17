@@ -49,6 +49,9 @@ const Compose = () => {
           backgroundColor: "#BEE0FF",
         }}
       >
+        <span style={{ paddingLeft: "10px" }}>
+          <CreateIcon />
+        </span>
         {/* <img src={pen} style={{ width: "14px", marginLeft: "38px" }} /> */}
         <h4 style={{ marginLeft: "23px", fontWeight: "400", fontSize: "20px" }}>
           Compose

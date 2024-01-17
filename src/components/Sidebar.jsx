@@ -1,12 +1,4 @@
-import {
-  AccountBox,
-  Article,
-  Group,
-  Home,
-  Person,
-  Settings,
-  Storefront,
-} from "@mui/icons-material";
+import { AccountBox, Article, Person } from "@mui/icons-material";
 import {
   Box,
   List,
@@ -15,7 +7,15 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import DeleteIcon from "@mui/icons-material/Delete";
+import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
+import ReportIcon from "@mui/icons-material/Report";
+import EmailIcon from "@mui/icons-material/Email";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { useState } from "react";
+import SendIcon from "@mui/icons-material/Send";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import Compose from "./Compose";
@@ -43,7 +43,7 @@ const Sidebar = () => {
             <ListItem disablePadding>
               <ListItemButton component="a" href="#inbox">
                 <ListItemIcon>
-                  <Home />
+                  <MailOutlineIcon />
                 </ListItemIcon>
                 <ListItemText
                   primary="Inbox"
@@ -65,7 +65,7 @@ const Sidebar = () => {
             <ListItem disablePadding>
               <ListItemButton component="a" href="#snoozed">
                 <ListItemIcon>
-                  <Group />
+                  <AccessTimeIcon />
                 </ListItemIcon>
                 <ListItemText
                   primary="Snoozed"
@@ -76,7 +76,7 @@ const Sidebar = () => {
             <ListItem disablePadding>
               <ListItemButton component="a" href="#send">
                 <ListItemIcon>
-                  <Storefront />
+                  <SendIcon />
                 </ListItemIcon>
                 <ListItemText
                   primary="Send"
@@ -121,7 +121,7 @@ const Sidebar = () => {
               <ListItem disablePadding>
                 <ListItemButton component="a" href="#important">
                   <ListItemIcon>
-                    <Settings />
+                    <PriorityHighIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Important"
@@ -143,7 +143,7 @@ const Sidebar = () => {
               <ListItem disablePadding>
                 <ListItemButton component="a" href="#allmail">
                   <ListItemIcon>
-                    <AccountBox />
+                    <EmailIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="All Mail"
@@ -154,7 +154,7 @@ const Sidebar = () => {
               <ListItem disablePadding>
                 <ListItemButton component="a" href="#spam">
                   <ListItemIcon>
-                    <AccountBox />
+                    <ReportIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Spam"
@@ -165,21 +165,10 @@ const Sidebar = () => {
               <ListItem disablePadding>
                 <ListItemButton component="a" href="#trash">
                   <ListItemIcon>
-                    <AccountBox />
+                    <DeleteIcon />
                   </ListItemIcon>
                   <ListItemText
                     primary="Trash"
-                    sx={{ display: { xs: "none", sm: "block" } }}
-                  />
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton component="a" href="#chats">
-                  <ListItemIcon>
-                    <AccountBox />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Chats"
                     sx={{ display: { xs: "none", sm: "block" } }}
                   />
                 </ListItemButton>
@@ -188,16 +177,17 @@ const Sidebar = () => {
           </Accordion>
           {/* =================================================================== */}
 
-          {/* <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#level">
               <ListItemIcon>
-                <ModeNight />
+                <ListItemText
+                  primary="Level"
+                  sx={{ display: { xs: "none", sm: "block" } }}
+                />
+                <AddIcon style={{ paddingLeft: "20px" }} />
               </ListItemIcon>
-              <Switch
-                onChange={() => setMode(mode === "light" ? "dark" : "light")}
-              />
             </ListItemButton>
-          </ListItem> */}
+          </ListItem>
         </List>
       </Box>
     </Box>

@@ -14,6 +14,7 @@ import {
   SettingsOutlined,
   AppsOutlined,
 } from "@mui/icons-material";
+import DehazeIcon from "@mui/icons-material/Dehaze";
 import SearchIcon from "@mui/icons-material/Search";
 
 const StyledToolbar = styled(Toolbar)({
@@ -66,13 +67,20 @@ const Header = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Typography
+          variant="h6"
+          sx={{
+            display: { xs: "none", sm: "block" },
+          }}
+          style={{ color: "black" }}
+        >
+          <span style={{ display: "inline", paddingRight: "15px" }}>
+            <DehazeIcon />
+          </span>
           Gmail
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
-        {/* <Search>
-          <InputBase placeholder="search..." />
-        </Search> */}
+
         <Box
           sx={{
             marginLeft: "57px",
@@ -94,7 +102,7 @@ const Header = () => {
             }}
           />
           <input
-            placeholder="Search mail"
+            placeholder="Search in mail"
             style={{
               marginLeft: "30px",
               height: "20px",
